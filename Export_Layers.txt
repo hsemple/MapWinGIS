@@ -1,0 +1,12 @@
+Private Sub ExportLayeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Ex-portLayeToolStripMenuItem.Click
+        Dim myImage As New MapWinGIS.Image
+        Dim myExtents As MapWinGIS.Extents
+        myExtents = mapMain.Extents
+        myImage = mapMain.SnapShot(myExtents)
+
+        Dim xName As String
+        xName = Format(DateTime.Now, "MMddyyyy-hhmmss") & ".bmp"
+        myImage.Save("C:\TEMP\" & xName, True, MapWinGIS.ImageType.BITMAP_FILE)
+
+    End Sub
+
