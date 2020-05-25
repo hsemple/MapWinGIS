@@ -32,7 +32,6 @@ Private Sub LabelFeatures_Click(sender As Object, e As EventArgs) Handles LabelF
             shpfile.Labels.AvoidCollisions = True
             shpfile.Labels.FrameVisible = False
             shpfile.GenerateLabels(3, tkLabelPositioning.lpCenter, False)
-
         Next
         MapMain.Redraw()
 
